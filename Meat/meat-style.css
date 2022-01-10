@@ -1,0 +1,246 @@
+@import "../shared.css";
+@import "../parallax-meat.css";
+
+.wrapper {
+    background-image: linear-gradient(to bottom, #2b2221, #281f1e, #261d1c, #231b1a);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+
+}
+
+.header:before {
+    background-color: rgba(39, 30, 29, 0.9);
+}
+
+.header__body h4 {
+    z-index: 6;
+}
+
+.section {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    margin: 1em;
+}
+
+.text-beef, .text-pork, .text-chicken {
+    display: inline-block;
+    padding: 1em;
+    width: 30%;
+    color: #BFA6A2;
+    font-size: 0.8em;
+    text-align: justify;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+.text-pork, .text-chicken {
+    width: 40%;
+}
+
+.image {
+    border-radius: 5px;
+}
+
+.heading {
+    padding: 10px 0;
+    color: #BF433B;
+    font-size: 1.5em;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.ingredients, .directions {
+    display: inline-block;
+    padding: 0 0 0.5em 0.5em;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #d3cfbd;
+}
+
+.ingredients-list {
+    display: inline;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.ingredients-list li, .directions-list li {
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    color: #c5b5b3;
+}
+
+.directions {
+    padding-top: 1em;
+}
+
+.directions-list {
+    display: inline-block;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+@media (max-width: 960px) {
+    body .lock {
+        overflow: hidden; /*блокирует прокрутку страницы при открытом
+        бургер-меню*/
+    }
+
+    .header__body {
+        height: 70px;
+    }
+
+    .header__logo {
+        flex: 0 0 50px;
+    }
+
+    .header__logo img {
+        margin-left: 0;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        margin-right: 1em;
+        z-index: 3;
+    }
+
+    .header__burger:before,
+    .header__burger:after {
+        content: '';
+        background-color: #F3EED9;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #F3EED9;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger:before {
+        top: 0;
+    }
+
+    .header__burger:after {
+        bottom: 0;
+    }
+
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 1, 1, 0.9);
+        padding: 70px 10px 20px 10px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__menu.active {
+        top: 0;
+    }
+
+    .header__list {
+        display: block;
+        padding-top: 3em;
+        text-align: center;
+    }
+
+    .header__list li {
+        margin: 0 0 20px 0;
+    }
+
+    .parallax-meat {
+        min-height: 450px;
+    }
+
+    .section {
+        display: flex;
+        flex-flow: column;
+        font-size: 1rem;
+        text-align: center;
+        width: 99%;
+    }
+
+    .container {
+        margin: 1em;
+    }
+
+    .text-beef, .text-pork, .text-chicken {
+        padding: 1em;
+        margin-bottom: 2em;
+        width: 95%;
+        font-size: 0.8em;
+        text-align: justify;
+    }
+
+    .heading {
+        padding: 5px 0;
+        font-size: 1.5em;
+    }
+
+    .ingredients, .directions {
+        text-align: left;
+        padding: 0 0 0.4em 0.4em;
+    }
+
+    .ingredients-list {
+        font-size: 0.9em;
+        text-align: justify;
+    }
+
+    .ingredients-list li, .directions-list li {
+        margin-left: 1.5em;
+    }
+
+    .directions {
+        padding-top: 1em;
+    }
+
+    .directions-list {
+        font-size: 0.9em;
+        text-align: justify;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .section {
+        font-size: 0.9em;
+    }
+
+    .parallax-meat {
+        min-height: 400px;
+    }
+}
+
