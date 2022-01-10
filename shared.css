@@ -135,7 +135,7 @@
     }
 
     .header__body h4 {
-        margin-left: 4em;
+        padding-left: 2em;
         font-size: 0.9em;
     }
     .header__body h4 span {

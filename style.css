@@ -27,18 +27,18 @@
     color: #ab9692;
 }
 .content__info h2 {
-    color: #2e2423;
+    color: #BF433B;
     font-size: 4em;
-    text-transform: uppercase;
+
     font-weight: 800;
     letter-spacing: 0.05em;
     line-height: 1em;
 }
 .content__info h2 span {
     color: #FFF5F1;
-    font-size: 0.4em;
+    font-size: 0.3em;
     font-weight: 300;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 .content__info p {
     font-size: 0.8em;
@@ -106,10 +106,6 @@
 @media (max-width: 1280px) {
     .header__logo {
         flex: 0 0 50px;
-    }
-
-    .header__logo img {
-        margin-left: 0;
     }
 
     .header__body h4 {
