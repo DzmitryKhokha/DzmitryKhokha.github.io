@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
 @import "../shared.css";
 @import "../parallax.css";
 
 .wrapper {
-    background-image: linear-gradient(to bottom, #2e2423, #2b2221, #281f1e, #261d1c, #231b1a);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    /*background-image: linear-gradient(to bottom, #2e2423, #2b2221, #281f1e, #261d1c, #231b1a);*/
+    background-color: #131110;
 }
 
 .content__text {
