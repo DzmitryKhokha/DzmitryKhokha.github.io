@@ -2,16 +2,13 @@
 
 .wrapper {
     background-image: linear-gradient(to bottom, #2b2221, #281f1e, #261d1c, #231b1a);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
 }
 
 .header:before {
-    background-color: rgba(39, 30, 29, 0.9);
+    background-color: rgba(32, 31, 30, 0.6);
 }
 
 .fish {
-    min-height: 850px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,10 +16,12 @@
 }
 
 .salmon {
-    background-image: url("/img/raw-fish-steaks-with-ingredients.jpg");
+    height: auto;
+    background-image: url("/img/raw-fish-steaks-with-ingredients-large.jpg");
 }
 
 .dorado {
+    height: auto;
     background-image: url("/img/dorado-fish-with-ingredients-dark.jpg");
 }
 
@@ -58,11 +57,12 @@
     display: inline-block;
     float: right;
     padding: 2em;
+    margin-bottom: 2em;
     width: 50%;
     color: #BFA6A2;
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: justify;
-    background: rgba(39, 30, 29, 0.8);
+    background-color: rgba(32, 31, 30, 0.6);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7px);
@@ -114,7 +114,7 @@
 }
 
 @media (max-width: 960px) {
-    body .lock {
+    body.lock {
         overflow: hidden; /*блокирует прокрутку страницы при открытом
         бургер-меню*/
     }
@@ -219,11 +219,11 @@
 
     .text-salmon, .text-dorado, .text-trout {
         text-align: justify;
-        background: rgba(39, 30, 29, 0.8);
+        background-color: rgba(32, 31, 30, 0.6);
         border-radius: 10px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.1px);
-        -webkit-backdrop-filter: blur(7.1px);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
     }
 
     .heading {
