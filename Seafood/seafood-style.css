@@ -7,7 +7,7 @@
    }
 
 .header:before {
-    background-color: rgba(39, 30, 29, 0.9);
+    background-color: rgba(19, 17, 16, 0.8);
 }
 
 .section {
@@ -33,7 +33,7 @@
     width: 65%;
     text-align: justify;
     border-radius: 8px;
-    background-color: rgba(39, 30, 29, 0.8);
+    background-color: rgba(19, 17, 16, 0.8);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
 }
@@ -41,7 +41,7 @@
 h2 {
     padding: 10px 0;
     color: #BF433B;
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: 500;
     text-align: center;
     letter-spacing: 1px;
@@ -51,7 +51,7 @@ h2 {
 .shrimp-directions-heading,
 .squid-ingredients-heading,
 .squid-directions-heading {
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-weight: 300;
     color: rgba(254, 196, 0, 0.59);
 }
@@ -72,7 +72,7 @@ h2 {
 .squid-directions-list {
     display: inline;
     padding: 1em;
-    font-size: 0.7em;
+    font-size: 0.9em;
     font-weight: 400;
     text-align: justify;
 }
