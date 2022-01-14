@@ -30,6 +30,20 @@
     max-width: 100%;
 }
 
+.text-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.text-item.animation-class {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+
 @media (max-width: 960px) {
     body .lock {
         overflow: hidden; /*блокирует прокрутку страницы при открытом
