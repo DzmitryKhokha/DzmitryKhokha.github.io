@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const scaleItems = document.querySelectorAll('.border')
+
+    const scaleItems = document.querySelectorAll('.scale-item')
 
     const scaleAnimation = () => {
-        let windowCenter = (window.innerHeight / 3) + window.scrollY;
+        let windowCenter = (window.innerHeight / 2) + window.scrollY;
         scaleItems.forEach(el => {
             let scrollOffSet = el.offsetTop + (el.offsetHeight / 2);
             if (windowCenter >= scrollOffSet) {
@@ -32,6 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollAnimation();
     window.addEventListener('scroll', () => {
         scrollAnimation();
-        scrollAnimation();
+        scaleAnimation();
     });
 });
