@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .header {
@@ -31,7 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(39, 30, 29, 0.6);
+    background-color: rgba(32, 31, 30, 0.65);
     z-index: 2;
 }
 
@@ -41,6 +41,20 @@
     justify-content: space-between;
     height: 100px;
     align-items: center;
+    animation-duration: 2s;
+    animation-name: slide-in;
+}
+
+@keyframes slide-in {
+    from {
+        margin-right: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 .header__logo {
@@ -91,7 +105,7 @@
     color: #BFA6A2;
     text-align: center;
     text-transform: uppercase;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 500;
     text-decoration: none;
     height: 1.4rem;
@@ -112,17 +126,22 @@
 
 /*Кнопка скрола вверх*/
 #topBtn {
+    display: none;
     position: fixed;
     bottom: 40px;
     right: 40px;
-    font-size: 22px;
     width: 40px;
     height: 40px;
-    background-color: #89726E;
-    color: #2b2221;
     border-radius: 5px;
+    border: 1px solid #F3EED9;
+    box-shadow: 3px 11px 25px -11px rgba(0, 0, 0, 0.75);
+    color: #201F1E99;
+    background-color: rgba(32, 31, 30, 0.8);
     cursor: pointer;
-    display: none;
+}
+
+.fa-arrow-up {
+    color: #F3EED9;
 }
 
 @media (max-width: 1280px) {
@@ -143,14 +162,11 @@
     }
 
     .header__list li {
-
         margin: 0 0 0 15px;
     }
 
     .header__link {
-        font-size: 0.6em;
-        height: 1.4rem;
-        transition: 0.3s ease;
-        padding: 5px 18px;
+        font-size: 0.7em;
+        padding: 5px 8px;
     }
 }

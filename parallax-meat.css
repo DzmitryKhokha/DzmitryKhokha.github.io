@@ -6,7 +6,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
 .beef {
@@ -25,7 +24,9 @@
     background-image: url("/img/raw-chicken-breast-dark-background.jpg");
 }
 
-.text {
+.beef-text,
+.pork-text,
+.chicken-text {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -36,7 +37,9 @@
     text-transform: uppercase;
 }
 
-.border {
+.beef-value,
+.pork-value,
+.chicken-value {
     padding: 0 3rem;
     font-size: 3rem;
     font-weight: 700;
