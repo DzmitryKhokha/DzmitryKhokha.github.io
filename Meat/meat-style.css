@@ -1,16 +1,11 @@
 @import "../shared.css";
-@import "../parallax-meat.css";
+@import "parallax-meat.css";
 
 .wrapper {
-    /*background-image: linear-gradient(to bottom, #2b2221, #281f1e, #261d1c, #231b1a);*/
-    background-color: #131110;
+    background-color: var(--wrapper-backgrpund-color);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
-
-}
-
-.header:before {
-    background-color: rgba(32, 31, 30, 0.65);
+    max-width: 100%;
 }
 
 .header__body h4 {
@@ -30,16 +25,43 @@
 }
 
 .text-beef, .text-pork, .text-chicken {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
     display: inline-block;
     padding: 1em;
     width: 30%;
-    color: #BFA6A2;
+    color: var(--header__link-color);
     font-size: 1em;
     text-align: justify;
     border-radius: 5px;
     background-color: rgba(255,255,255,0.1);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
+}
+
+.text-beef.animation-class,
+.text-pork.animation-class,
+.text-chicken.animation-class {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.text-beef.animation-class:nth-child(1),
+.text-pork.animation-class:nth-child(1),
+.text-chicken.animation-class:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.text-beef.animation-class:nth-child(2),
+.text-pork.animation-class:nth-child(2),
+.text-chicken.animation-class:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.text-beef.animation-class:nth-child(3) {
+    transition-delay: 0.6s;
 }
 
 .text-pork, .text-chicken {
@@ -52,31 +74,34 @@
 
 .heading {
     padding: 10px 0;
-    color: #BF433B;
-    font-size: 1.5em;
+    color: var(--main-accent-color);
+    font-size: 1.3em;
+    font-weight: 300;
     text-align: center;
-    letter-spacing: 1px;
+
 }
 
 .ingredients, .directions {
     display: inline-block;
     padding: 0 0 0.5em 0.5em;
+    font-size: 1.1em;
+    font-weight: 300;
     text-align: left;
     letter-spacing: 1px;
-    color: #d3cfbd;
+    color: var(--main-headind-color);
 }
 
 .ingredients-list {
     display: inline;
-    font-size: 0.9em;
-    font-weight: 400;
+    font-size: 1em;
+    font-weight: 300;
     text-align: justify;
 }
 
 .ingredients-list li, .directions-list li {
     margin-left: 2em;
     margin-bottom: 0.5em;
-    color: #c5b5b3;
+    color: var(--list-text-color);
 }
 
 .directions {
@@ -85,104 +110,27 @@
 
 .directions-list {
     display: inline-block;
-    font-size: 0.9em;
+    font-size: 1em;
+    font-weight: 300;
     text-align: justify;
 }
 
-@media (max-width: 960px) {
-    body .lock {
-        overflow: hidden; /*блокирует прокрутку страницы при открытом
-        бургер-меню*/
+@keyframes arrowAnimation {
+    from {
+        transform: translateY(20px);
     }
+    to {
+        transform: translateY(0);
+    }
+}
 
-    .header__body {
-        height: 70px;
-    }
+svg path {
+    fill: var(--button-text-color);
+}
 
-    .header__logo {
-        flex: 0 0 50px;
-    }
-
-    .header__logo img {
-        margin-left: 0;
-    }
-
-    .header__burger {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 20px;
-        margin-right: 1em;
-        z-index: 3;
-    }
-
-    .header__burger:before,
-    .header__burger:after {
-        content: '';
-        background-color: #F3EED9;
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        left: 0;
-        transition: all 0.3s ease 0s;
-    }
-
-    .header__burger span {
-        position: absolute;
-        background-color: #F3EED9;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        top: 9px;
-        transition: all 0.3s ease 0s;
-    }
-
-    .header__burger:before {
-        top: 0;
-    }
-
-    .header__burger:after {
-        bottom: 0;
-    }
-
-    .header__burger.active:before {
-        transform: rotate(45deg);
-        top: 9px;
-    }
-    .header__burger.active:after {
-        transform: rotate(-45deg);
-        bottom: 9px;
-    }
-    .header__burger.active span {
-        transform: scale(0);
-    }
-
-    .header__menu {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(1, 1, 1, 0.9);
-        padding: 70px 10px 20px 10px;
-        transition: all 0.3s ease 0s;
-    }
-    .header__menu.active {
-        top: 0;
-    }
-
-    .header__list {
-        display: block;
-        padding-top: 3em;
-        text-align: center;
-    }
-
-    .header__list li {
-        margin: 0 0 20px 0;
-    }
-
+@media (max-width: 1180px) {
     .parallax-meat {
-        min-height: 450px;
+        min-height: 750px;
     }
 
     .section {
@@ -244,4 +192,3 @@
         min-height: 400px;
     }
 }
-
