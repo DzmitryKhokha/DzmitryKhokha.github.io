@@ -6,10 +6,6 @@
     background-size: cover;
    }
 
-.header:before {
-    background-color: rgba(19, 17, 16, 0.8);
-}
-
 .section {
     display: flex;
     justify-content: flex-start;
@@ -40,9 +36,9 @@
 
 h2 {
     padding: 10px 0;
-    color: #BF433B;
+    color: var(--main-accent-color);
     font-size: 1.4em;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
 }
@@ -63,7 +59,7 @@ h2 {
     display: inline-block;
     padding: 0 0 0.5em 0.5em;
     text-align: left;
-    color: #d3cfbd;
+    color: var(--button-text-color);
 }
 
 .shrimp-ingredients-list,
@@ -72,8 +68,8 @@ h2 {
 .squid-directions-list {
     display: inline;
     padding: 1em;
-    font-size: 0.9em;
-    font-weight: 400;
+    font-size: 1em;
+    font-weight: 200;
     text-align: justify;
 }
 
@@ -83,7 +79,7 @@ h2 {
 .squid-directions-list li {
     margin-left: 1em;
     margin-bottom: 0.2em;
-    color: #c5b5b3;
+    color: var(--list-text-color);
 }
 
 .shrimp-directions,
@@ -95,7 +91,7 @@ h2 {
     margin-bottom: 1em;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
     .shrimp,
     .squid {
         width: 95%;
@@ -133,7 +129,7 @@ h2 {
     .header__burger:before,
     .header__burger:after {
         content: '';
-        background-color: #F3EED9;
+        background-color: var(--button-text-color);
         position: absolute;
         width: 100%;
         height: 3px;
@@ -143,7 +139,7 @@ h2 {
 
     .header__burger span {
         position: absolute;
-        background-color: #F3EED9;
+        background-color: var(--button-text-color);
         left: 0;
         width: 100%;
         height: 3px;
@@ -196,9 +192,9 @@ h2 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
     .section {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     .shrimp,
@@ -208,4 +204,3 @@ h2 {
         width: 95%;
     }
 }
-
