@@ -12,6 +12,10 @@
     background-image: url("/img/beef-chunks-with-ingredients-served-table.jpg");
 }
 
+.beef.anim-class {
+    background-image: url("../img/beef-chunks-with-ingredients-served-table-dark.jpg");
+}
+
 .pork {
     background-image: url("/img/raw-meat-with-ingredients-cooking.jpg");
 }
@@ -35,13 +39,13 @@
     letter-spacing: 8px;
     text-transform: uppercase;
     animation-name: scale;
-    animation-duration: 0.8s;
+    animation-duration: 2s;
 }
 
 @keyframes scale {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(-15px);
     }
     to {
         opacity: 1;
@@ -71,9 +75,14 @@
         position: absolute;
     }
 
+    .parallax-meat {
+        height: 60vh;
+    }
+
     .beef-value,
     .pork-value,
     .chicken-value {
+        padding: 0;
         color: var(--main-headind-color);
     }
 }
