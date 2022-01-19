@@ -7,17 +7,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: rgba(19, 17, 16, 0.95);
+    background-color: var(--wrapper-backgrpund-color);
 }
 
 .charcoal {
     background-image: url("/img/charcoal.jpg");
-    min-height: 800px;
 }
 
 .vudu {
     background-image: url("/img/vudu.png");
-    min-height: 800px;
 }
 .ghost {
     background-image: url("/img/Duhi.jpeg");
@@ -47,7 +45,7 @@
     color: var(--main-headind-color);
     font-size: 3.5em;
     font-weight: 200;
-    line-height: 2rem;
+    line-height: 1em;
     letter-spacing: 4px;
     text-transform: uppercase;
     text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
@@ -75,7 +73,12 @@
 
 
 @media (max-width: 560px) {
+    .parallax {
+        min-height: 300px;
+    }
+
     .text {
-        font-size: 30px;
+        font-size: 35px;
+        font-weight: 400;
     }
 }
