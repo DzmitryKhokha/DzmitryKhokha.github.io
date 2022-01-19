@@ -6,26 +6,17 @@
     background-size: cover;
    }
 
-.section {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 2rem;
-    font-size: 1rem;
-    text-align: center;
-    width: 100%;
-}
-
-.section-container {
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 2em;
+    margin-top: 6em;
 }
 
 .shrimp,
 .squid {
     padding: 1em;
-    margin-left: 1em;
+    margin: 0 0 2em 1em;
     width: 65%;
     text-align: justify;
     border-radius: 8px;
@@ -57,7 +48,6 @@ h2 {
 .squid-ingredients,
 .squid-directions {
     display: inline-block;
-    padding: 0 0 0.5em 0.5em;
     text-align: left;
     color: var(--button-text-color);
 }
@@ -77,14 +67,9 @@ h2 {
 .shrimp-directions-list li,
 .squid-ingredients-list li,
 .squid-directions-list li {
-    margin-left: 1em;
+    margin-left: 2em;
     margin-bottom: 0.2em;
     color: var(--list-text-color);
-}
-
-.shrimp-directions,
-.squid-directions {
-    margin-left: 1em;
 }
 
 .squid {
@@ -95,14 +80,6 @@ h2 {
     .shrimp,
     .squid {
         width: 95%;
-    }
-
-    .shrimp-ingredients,
-    .shrimp-directions,
-    .squid-ingredients,
-    .squid-directions {
-        margin: 0;
-        padding: 0;
     }
 
     body .lock {
@@ -192,15 +169,10 @@ h2 {
     }
 }
 
-@media (max-width: 960px) {
-    .section {
-        font-size: 1em;
-    }
 
-    .shrimp,
+@media (max-width: 560px) {
+   .shrimp,
     .squid {
-        display: flex;
-        flex-direction: column;
-        width: 95%;
-    }
+       margin: 0 auto;
+   }
 }
