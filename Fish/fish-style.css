@@ -38,6 +38,10 @@
     margin: 1em;
 }
 
+.container-img {
+   display: none;
+}
+
 .text-salmon,
 .text-dorado,
 .text-trout {
@@ -52,7 +56,6 @@
     color: var(--header__link-color);
     font-size: 1em;
     text-align: justify;
-    border-radius: 10px;
     background-color: rgba(2, 2, 2, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -83,9 +86,8 @@
     display: inline-block;
     padding: 0 0 0.5em 0.5em;
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: 300;
     text-align: left;
-    letter-spacing: 1px;
     color: var(--main-headind-color);
 }
 
@@ -99,15 +101,13 @@
 .ingredients-list li, .directions-list li {
     margin-left: 2em;
     margin-bottom: 0.5em;
-    color: var(--list-text-color);
 }
 
 .directions {
-    padding-top: 0.8em;
+    padding-top: 1em;
 }
 
 @media (max-width: 960px) {
-
     .dorado {
         background-position: left;
     }
@@ -119,33 +119,49 @@
     }
 
     .text-salmon, .text-dorado, .text-trout {
-        width: 80%;
+        padding: 0;
+        width: 85%;
     }
-}
 
-@media (max-width: 560px) {
+    .container-img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
 
     .dorado,
     .salmon,
     .trout {
         background-image: none;
     }
+}
 
+@media (max-width: 560px) {
     .fish {
         font-size: 0.9em;
+    }
+
+    .section-salmon,
+    .section-dorado,
+    .section-trout {
+        padding: 0;
+        margin: 0;
     }
 
     .text-salmon,
     .text-dorado,
     .text-trout {
-        padding: 1em;
-        width: 95%;
+        width: 100%;
     }
-
 }
 
 @media (max-width: 400px) {
     .fish {
-        font-size: 0.8em;
+        font-size: 0.7em;
+    }
+
+    .container-img {
+        width: 95%;
+        margin: 0 auto;
     }
 }
