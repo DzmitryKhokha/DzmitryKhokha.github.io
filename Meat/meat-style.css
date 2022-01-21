@@ -65,13 +65,13 @@
 }
 
 .text-pork, .text-chicken {
-    width: 45%;
+    width: 40%;
 }
 
 .heading {
     padding: 10px 0;
     color: var(--main-accent-color);
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 300;
     text-align: center;
 
@@ -83,7 +83,6 @@
     font-weight: 300;
     text-align: left;
     font-size: 1.1em;
-    letter-spacing: 1px;
     color: var(--main-headind-color);
 }
 
