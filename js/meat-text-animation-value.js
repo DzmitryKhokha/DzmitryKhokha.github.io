@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        let windowQuarter = (window.innerHeight / 5) + window.scrollY;
+        /*let windowQuarter = (window.innerHeight / 5) + window.scrollY;
         addClass.forEach(el => {
             let scrollOffSet = el.offsetTop + (el.offsetHeight*0.8);
             if(windowQuarter >= scrollOffSet) {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 el.classList.remove('anim-class')
             }
-        })
+        })*/
     };
 
 

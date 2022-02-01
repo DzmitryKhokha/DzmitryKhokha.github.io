@@ -1,0 +1,276 @@
+@import "../shared.css";
+
+.wrapper {
+    background-color: var(--wrapper-backgrpund-color);
+}
+
+.container .tomato {
+    margin-top: 4em;
+}
+
+.container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.container.animation-class {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.vegetables-tomato {
+    background-image: url("../img/bbq-tomatoes-wooden-charcoal-flat-lay.jpg");
+}
+
+.vegetables-pepper {
+    background-image: url("../img/healthy-tasty-vegetables-grilled-pan.jpg");
+}
+
+.vegetables-zucchini {
+    background-image: url("../img/zucchini.jpg");
+}
+
+.vegetables-tomato,
+.vegetables-pepper,
+.vegetables-zucchini {
+    height: 85vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.tomato,
+.pepper,
+.zucchini {
+    margin-left: 1em;
+    padding: 1em;
+    width: 60%;
+    text-align: justify;
+    border-radius: 8px;
+    background-color: var(--wrapper-backgrpund-color);
+    backdrop-filter: blur(2px);
+}
+
+.vegetables-img {
+    display: none;
+}
+
+.tomato-img,
+.pepper-img,
+.zucchini-img {
+    width: 40px;
+    height: 40px;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: jump;
+}
+
+@keyframes jump {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.tomato-heading,
+.pepper-heading,
+.zucchini-heading {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin-right: 10px;
+}
+
+.checkbox input:hover {
+    cursor: pointer;
+}
+
+.label {
+    padding: 5px 0;
+}
+
+.label span {
+    margin-left: 10px;
+}
+
+.checkbox {
+    display: none;
+}
+
+.fake {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid orangered;
+    border-radius: 2px;
+    position: relative;
+}
+
+.fake::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: greenyellow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.checkbox:checked + .fake::before {
+    opacity: 1;
+}
+
+h2 {
+    padding: 10px 10px;
+    color: var(--main-accent-color);
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.tomato-ingredients-heading,
+.tomato-directions-heading,
+.pepper-ingredients-heading,
+.pepper-directions-heading,
+.zucchini-ingredients-heading,
+.zucchini-directions-heading {
+    margin-left: 1em;
+    font-weight: 500;
+    color: var(--main-headind-color);
+}
+
+.tomato-ingredients,
+.tomato-directions,
+.pepper-ingredients,
+.pepper-directions,
+.zucchini-ingredients,
+.zucchini-directions {
+    width: 90%;
+    text-align: left;
+    margin-bottom: 20px;
+    color: var(--button-text-color);
+}
+
+.tomato-ingredients-list,
+.tomato-directions-list,
+.pepper-ingredients-list,
+.pepper-directions-list,
+.zucchini-ingredients-list,
+.zucchini-directions-list {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.tomato-ingredients-list li,
+.tomato-directions-list li,
+.pepper-ingredients-list li,
+.pepper-directions-list li,
+.zucchini-ingredients-list li,
+.zucchini-directions-list li {
+    margin-bottom: 0.8em;
+    color: var(--list-text-color);
+}
+
+.zucchini {
+    margin-bottom: 1em;
+}
+
+@media (max-width: 960px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .tomato,
+    .pepper,
+    .zucchini {
+        width: 85%;
+        padding: 0;
+    }
+
+    .vegetables-tomato,
+    .vegetables-pepper,
+    .vegetables-zucchini {
+        height: auto;
+        background-image: none;
+        margin: 1em;
+    }
+
+    .tomato-ingredients,
+    .tomato-directions,
+    .pepper-ingredients,
+    .pepper-directions,
+    .zucchini-ingredients,
+    .zucchini-directions {
+        padding: 1em;
+    }
+
+    .vegetables-img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 560px) {
+    .tomato,
+    .pepper,
+    .zucchini {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .vegetables-tomato,
+    .vegetables-pepper,
+    .vegetables-zucchini {
+        margin: 0;
+    }
+
+    .vegetables-img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 400px) {
+    .tomato,
+    .pepper,
+    .zucchini {
+        font-size: 0.8em;
+    }
+
+    .vegetables-img {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
